@@ -1,0 +1,12 @@
+C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Application\bin\Debug\HXAvocado.Application.dll.config
+C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Application\bin\Debug\HXAvocado.Application.dll
+C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Application\bin\Debug\HXAvocado.Application.pdb
+C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Application\bin\Debug\EntityFramework.dll
+C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Application\bin\Debug\EntityFramework.SqlServer.dll
+C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Application\bin\Debug\EntityFramework.xml
+C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Application\bin\Debug\EntityFramework.SqlServer.xml
+C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Application\bin\Debug\zh-Hans\EntityFramework.resources.dll
+C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Application\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Application\obj\Debug\HXAvocado.Application.dll
+C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Application\obj\Debug\HXAvocado.Application.pdb
+C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Application\obj\Debug\HXAvocado.Application.csprojResolveAssemblyReference.cache

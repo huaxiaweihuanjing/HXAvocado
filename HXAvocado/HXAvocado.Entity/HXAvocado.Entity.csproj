@@ -49,12 +49,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="01 Infrastructure\ICreationAudited.cs" />
+    <Compile Include="01 Infrastructure\IDeleteAudited.cs" />
+    <Compile Include="01 Infrastructure\IEntity.cs" />
+    <Compile Include="01 Infrastructure\IModificationAudited.cs" />
+    <Compile Include="02 Entity\EnterpriseEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HXAvocado.Code\HXAvocado.Code.csproj">
+      <Project>{2d04fb7a-dca7-4dc6-ab81-79cbe494f80b}</Project>
+      <Name>HXAvocado.Code</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
