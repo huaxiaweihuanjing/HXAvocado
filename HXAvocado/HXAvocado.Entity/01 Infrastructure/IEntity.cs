@@ -13,9 +13,10 @@ namespace HXAvocado.Entity
             entity.CreatorUserId = "No user";
             entity.CreatorTime = DateTime.Now;
         }
-        public void Modify()
+        public void Modify(string keyValue)
         {
             var entity = this as IModificationAudited;
+            entity.ID = keyValue;
             //暂时没有用户这里存字符串
             entity.LastModifyUserId = "No user";
             entity.LastModifyTime = DateTime.Now;
