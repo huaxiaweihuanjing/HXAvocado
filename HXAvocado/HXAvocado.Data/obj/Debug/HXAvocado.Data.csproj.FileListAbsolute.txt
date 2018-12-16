@@ -14,3 +14,5 @@ C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Data\bin\Debug\zh-Hans\EntityFramewor
 C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Data\obj\Debug\HXAvocado.Data.csprojResolveAssemblyReference.cache
 C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Data\obj\Debug\HXAvocado.Data.dll
 C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Data\obj\Debug\HXAvocado.Data.pdb
+C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Data\bin\Debug\Newtonsoft.Json.dll
+C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Data\bin\Debug\Newtonsoft.Json.xml

@@ -9,7 +9,7 @@ namespace HXAvocado.Entity
     public interface IModificationAudited
     {
         /// <summary>
-        /// 
+        /// 记录ID
         /// </summary>
         string ID { get; set; }
         /// <summary>

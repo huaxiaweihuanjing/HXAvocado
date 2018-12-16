@@ -12,3 +12,5 @@ C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Entity\bin\Debug\zh-Hans\EntityFramew
 C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Entity\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
 C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Entity\obj\Debug\HXAvocado.Entity.dll
 C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Entity\obj\Debug\HXAvocado.Entity.pdb
+C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Entity\bin\Debug\Newtonsoft.Json.dll
+C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Entity\bin\Debug\Newtonsoft.Json.xml

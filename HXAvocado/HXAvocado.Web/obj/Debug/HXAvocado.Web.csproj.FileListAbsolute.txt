@@ -80,3 +80,7 @@ C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\bin\zh-Hans\System.Web.WebPages.R
 C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\obj\Debug\HXAvocado.Web.dll
 C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\obj\Debug\HXAvocado.Web.pdb
 C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\obj\Debug\HXAvocado.Web.csprojResolveAssemblyReference.cache
+C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\bin\HXAvocado.Code.dll
+C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\bin\Newtonsoft.Json.dll
+C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\bin\HXAvocado.Code.pdb
+C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\bin\Newtonsoft.Json.xml
