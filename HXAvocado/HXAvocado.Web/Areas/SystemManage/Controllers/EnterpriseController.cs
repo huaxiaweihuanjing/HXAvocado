@@ -9,6 +9,13 @@ using HXAvocado.Code;
 
 namespace HXAvocado.Web.Areas.SystemManage.Controllers
 {
+    /// <summary>
+    /// 版 本 0.1.0
+    /// AGPLv3
+    /// 创建人：袁皓
+    /// 日 期：2018.12.17
+    /// 描 述：企业信息管理控制器 
+    /// </summary>
     public class EnterpriseController : Controller
     {
         private EnterpriseApp app = new EnterpriseApp();
@@ -16,15 +23,6 @@ namespace HXAvocado.Web.Areas.SystemManage.Controllers
         public ActionResult Index()
         {
             var model = app.EnterpriseQuery();
-            //EnterpriseViewModel enterpriseViewModel = app.EnterpriseQuery();
-            //ViewBag.ID = enterpriseViewModel.ID;
-            //ViewBag.Name = enterpriseViewModel.Name;
-            //ViewBag.Content = enterpriseViewModel.Content;
-            //ViewBag.ServicePhone = enterpriseViewModel.ServicePhone;
-            //ViewBag.ServiceEmail = enterpriseViewModel.ServiceEmail;
-            //ViewBag.Address = enterpriseViewModel.Address;
-            //ViewBag.DepositBank = enterpriseViewModel;
-            //ViewBag.BankAccount = enterpriseViewModel;
             return View(model);
         }
         [HttpPost]

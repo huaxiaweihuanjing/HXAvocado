@@ -3,6 +3,13 @@ using HXAvocado.Code;
 
 namespace HXAvocado.Entity
 {
+    /// <summary>
+    /// 版 本 0.1.0
+    /// AGPLv3
+    /// 创建人：袁皓
+    /// 日 期：2018.12.17
+    /// 描 述：模型预设操作 
+    /// </summary>
     public class IEntity<TEntity>
     {
         public void Create()

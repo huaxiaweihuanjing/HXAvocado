@@ -7,6 +7,13 @@ using System.ComponentModel.DataAnnotations;
 
 namespace HXAvocado.Entity
 {
+    /// <summary>
+    /// 版 本 0.1.0
+    /// AGPLv3
+    /// 创建人：袁皓
+    /// 日 期：2018.12.17
+    /// 描 述：企业管理模型 
+    /// </summary>
     public class EnterpriseEntity : IEntity<EnterpriseEntity>, ICreationAudited, IDeleteAudited, IModificationAudited
     {
         /// <summary>

@@ -2169,7 +2169,6 @@
     <Content Include="WebRoot\Plugins\popper\umd\popper.min.js" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\ControllerBase.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\SystemManage\Controllers\EnterpriseController.cs" />
     <Compile Include="Areas\SystemManage\SystemManageAreaRegistration.cs" />

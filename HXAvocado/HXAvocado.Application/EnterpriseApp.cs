@@ -10,6 +10,13 @@ using HXAvocado.Code;
 
 namespace HXAvocado.Application
 {
+    /// <summary>
+    /// 版 本 0.1.0
+    /// AGPLv3
+    /// 创建人：袁皓
+    /// 日 期：2018.12.17
+    /// 描 述：企业信息管理 
+    /// </summary>
     public class EnterpriseApp
     {
         private HXAvocadoConnection db = new HXAvocadoConnection();
@@ -45,31 +52,7 @@ namespace HXAvocado.Application
                 enterpriseData.BankAccount = "";
                 ulits.Add(enterpriseData);
             }
-            return ulits;
-            //EnterpriseViewModel enterpriseData = new EnterpriseViewModel();
-            //if (ulits.Count == 0)
-            //{
-            //    enterpriseData.ID = "";
-            //    enterpriseData.Name = "";
-            //    enterpriseData.Content = "";
-            //    enterpriseData.ServicePhone = "";
-            //    enterpriseData.ServiceEmail = "";
-            //    enterpriseData.Address = "";
-            //    enterpriseData.DepositBank = "";
-            //    enterpriseData.BankAccount = "";
-            //}
-            //else
-            //{
-            //    enterpriseData.ID = ulits.First().ID;
-            //    enterpriseData.Name = ulits.First().Name;
-            //    enterpriseData.Content = ulits.First().Content;
-            //    enterpriseData.ServicePhone = ulits.First().ServicePhone;
-            //    enterpriseData.ServiceEmail = ulits.First().ServiceEmail;
-            //    enterpriseData.Address = ulits.First().Address;
-            //    enterpriseData.DepositBank = ulits.First().DepositBank;
-            //    enterpriseData.BankAccount = ulits.First().BankAccount;
-            //}
-            //return enterpriseData;
+            return ulits;        
         }
         public void EnterpriseEdit(EnterpriseViewModel enterpriseData)
         {

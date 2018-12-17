@@ -6,6 +6,13 @@ using System.Threading.Tasks;
 
 namespace HXAvocado.Entity
 {
+    /// <summary>
+    /// 版 本 0.1.0
+    /// AGPLv3
+    /// 创建人：袁皓
+    /// 日 期：2018.12.17
+    /// 描 述：模型新建接口 
+    /// </summary>
     public interface ICreationAudited
     {
         /// <summary>
