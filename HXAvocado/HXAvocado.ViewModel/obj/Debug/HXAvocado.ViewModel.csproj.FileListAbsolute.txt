@@ -7,6 +7,6 @@ C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.ViewModel\bin\Debug\EntityFramework.x
 C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.ViewModel\bin\Debug\EntityFramework.SqlServer.xml
 C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.ViewModel\bin\Debug\zh-Hans\EntityFramework.resources.dll
 C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.ViewModel\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.ViewModel\obj\Debug\HXAvocado.ViewModel.csprojResolveAssemblyReference.cache
 C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.ViewModel\obj\Debug\HXAvocado.ViewModel.dll
 C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.ViewModel\obj\Debug\HXAvocado.ViewModel.pdb
-C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.ViewModel\obj\Debug\HXAvocado.ViewModel.csprojResolveAssemblyReference.cache

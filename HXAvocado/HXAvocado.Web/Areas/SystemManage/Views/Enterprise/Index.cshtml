@@ -10,274 +10,87 @@
     </font>
 </div>
 <div class="row">
-    <div class="card w-100 bg-light">
-        <div class="card-body">
-            <div class="btn-toolbar" role="toolbar">
-                <div class="btn-group mr-2" role="group">
-                    <button type="button" id="btn_add" class="btn btn-primary">新增</button>
-                </div>
-                <div class="btn-group mr-2" role="group">
-                    <button type="button" id="btn_edit" class="btn btn-info">修改</button>
-                </div>
-                <div class="btn-group mr-2" role="group">
-                    <button type="button" id="btn_remove" class="btn btn-warning">删除</button>
-                </div>
-                <div class="btn-group mr-2" role="group">
-                    <button type="button" id="btn_department" class="btn btn-warning">部门管理</button>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="card w-100 border-light">
         <div class="card-body">
-            <table id="example" class="display" cellspacing="0">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>公司名称</th>
-                        <th>是否可用</th>
-                        <th>创建时间</th>
-                        <th>删除标识</th>
-                        <th>删除时间</th>
-                        <th>最后修改时间</th>
-                    </tr>
-                </thead>
-            </table>
+            <div class="row">              
+                <div class="col-md-12 order-md-1">
+                    <h4 class="mb-3">企业信息</h4>
+                    @{
+                        foreach (var item in Model)
+                        {
+                            <form>
+                                <input type="hidden"id="ID" value="@item.ID">
+                                <div class="mb-3">
+                                    <label for="Name">企业名称</label>
+                                    <input type="text" class="form-control" id="Name" placeholder="企业名称" value="@item.Name">
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="ServicePhone">电话</label>
+                                        <input type="text" class="form-control" id="ServicePhone" placeholder="电话"value="@item.ServicePhone">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="ServiceEmail">Email</label>
+                                        <input type="email" class="form-control" id="ServiceEmail" placeholder="you@example.com"value="@item.ServiceEmail">
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="Address">企业地址</label>
+                                    <input type="text" class="form-control" id="Address" placeholder="企业地址"value="@item.Address">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="DepositBank">开户银行</label>
+                                    <input type="text" class="form-control" id="DepositBank" placeholder="开户银行"value="@item.DepositBank">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="BankAccount">银行账户</label>
+                                    <input type="text" class="form-control" id="BankAccount" placeholder="银行账户"value="@item.BankAccount">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="Content">企业描述</label>
+                                    <textarea class="form-control" id="Content" placeholder="企业描述">@item.Content</textarea>
+                                </div>
+                                <hr class="mb-4">
+                                <button class="btn btn-primary btn-lg btn-block" type="button" id="btn_save">保 存</button>
+                            </form>
+                        }
+                    }
+                   
+                </div>
+            </div>
         </div>
 
     </div>
 </div>
-
-<div class="modal fade" id="Modal" name="AddModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="title"></h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body" id="form">
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
-                <button type="button" class="btn btn-primary" id="EnterpriseSubmit">提交</button>
-            </div>
-        </div>
-
-    </div>
-</div>
-
 
 @section scripts{
     <script>
-        //表格
-        $(document).ready(function () {
-            var table = $('#example').DataTable({
-                language: {
-                    "sProcessing": "处理中...",
-                    "sLengthMenu": "显示 _MENU_ 项结果",
-                    "sZeroRecords": "没有匹配结果",
-                    "sInfo": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
-                    "sInfoEmpty": "显示第 0 至 0 项结果，共 0 项",
-                    "sInfoFiltered": "(由 _MAX_ 项结果过滤)",
-                    "sInfoPostFix": "",
-                    "sSearch": "搜索:",
-                    "sUrl": "",
-                    "sEmptyTable": "表中数据为空",
-                    "sLoadingRecords": "载入中...",
-                    "sInfoThousands": ",",
-                    "oPaginate": {
-                        "sFirst": "首页",
-                        "sPrevious": "上页",
-                        "sNext": "下页",
-                        "sLast": "末页"
-                    },
-                    "oAria": {
-                        "sSortAscending": ": 以升序排列此列",
-                        "sSortDescending": ": 以降序排列此列"
+        //
+        $('#btn_save').on('click', function () {
+            $("#btn_save").attr('disabled', "true").text('保存中...');
+            var id = $.trim($("#ID").val());
+            var name = $.trim($("#enterprise-name").val());
+            var marked = $('#enterpriseSelect').val();
+            var param = { ID: $.trim(id), Name: $.trim(name), Marked: marked };
+            if ($('[name=__RequestVerificationToken]').length > 0) {
+                param["__RequestVerificationToken"] = $('[name=__RequestVerificationToken]').val();
+            }
+            $.ajax({
+                url: "/AdminManage/Admin/EnterpriseEdit",
+                async: false,
+                data: param,
+                method: "post",
+                dataType: "json",
+                success: function (data) {
+                    if (data.state == "success") {
+                        $('#Modal').modal('hide')
+                    } else {
+                        $("#EnterpriseSubmit").removeAttr("disabled").text('提交');
                     }
-                },
-                serviceSize: true,
-            //    ordering: false,
-                paging: false,
-                dataSrc: '',
-                columns: [
-                 { "data": "ID", "visible": false },
-                 { "data": "EName" },
-                 { "data": "AMarked" },
-                 { "data": "CreatorTime", "defaultContent": "" },
-                 { "data": "DMark", "defaultContent": "" },
-                 { "data": "DeleteTime", "defaultContent": "" },
-                 { "data": "LastModifyTime", "defaultContent": "" },
-                ],
-                ajax: {
-                    //使用POST请求的方式
-                    //type: 'POST',
-                    //请求的URL地址
-                    url: 'EnterpriseList'
-                },
-
-
-
-            });
-            $('#example tbody').on('click', 'tr', function () {
-                if ($(this).hasClass('selected')) {
-                    $(this).removeClass('selected');
-                }
-                else {
-                    table.$('tr.selected').removeClass('selected');
-                    $(this).addClass('selected');
                 }
             });
-
-            $('#button').click(function () {
-                table.row('.selected').remove().draw(false);
-            });
         });
-        //新增modal
-        $('#btn_add').on('click', function () {
-            $('#Modal').on('show.bs.modal', function (event) {
-                $('#form').load("EnterpriseForm?ID=" + "");
-                var modal = $(this)
-                modal.find('.modal-title').text('新增企业')
-                $('#EnterpriseSubmit').on('click', function () {
-                    $("#EnterpriseSubmit").attr('disabled', "true").text('保存中...');
-                    var name = $.trim($("#enterprise-name").val());
-                    var marked = $('#enterpriseSelect').val();
-                    var param = { Name: $.trim(name), Marked: marked };
-                    if ($('[name=__RequestVerificationToken]').length > 0) {
-                        param["__RequestVerificationToken"] = $('[name=__RequestVerificationToken]').val();
-                    }
-                    $.ajax({
-                        url: "/AdminManage/Admin/EnterpriseAdd",
-                        async: false,
-                        data: param,
-                        method: "post",
-                        dataType: "json",
-                        success: function (data) {
-                            if (data.state == "success") {
-                                $('#Modal').modal('hide')
-                            } else {
 
-                                $("#EnterpriseSubmit").removeAttr("disabled").text('提交');
-                            }
-                        }
-                    });
-
-                });
-            })
-            $('#Modal').modal()
-        });
-        //修改modal
-        $('#btn_edit').on('click', function () {
-            var table = $("#example").dataTable();
-            var nTrs = table.fnGetNodes();//fnGetNodes获取表格所有行，nTrs[i]表示第i行tr对象
-            for (var i = 0; i < nTrs.length; i++) {
-                if ($(nTrs[i]).hasClass('selected')) {
-                    var ID = $('#example').DataTable().row(i).data().ID;
-                }
-            }
-            if (ID == null) { alterOpen(true, "warning", "请选择要修改的内容!", 3000) }
-            else {
-                $('#Modal').on('show.bs.modal', function (event) {
-                    $('#form').load("EnterpriseForm?ID=" + ID);
-                    var modal = $(this)
-                    modal.find('.modal-title').text('修改企业')
-                    $('#EnterpriseSubmit').on('click', function () {
-                        $("#EnterpriseSubmit").attr('disabled', "true").text('保存中...');
-                        var id = $.trim($("#ID").val());
-                        var name = $.trim($("#enterprise-name").val());
-                        var marked = $('#enterpriseSelect').val();
-                        var param = { ID: $.trim(id), Name: $.trim(name), Marked: marked };
-                        if ($('[name=__RequestVerificationToken]').length > 0) {
-                            param["__RequestVerificationToken"] = $('[name=__RequestVerificationToken]').val();
-                        }
-                        $.ajax({
-                            url: "/AdminManage/Admin/EnterpriseEdit",
-                            async: false,
-                            data: param,
-                            method: "post",
-                            dataType: "json",
-                            success: function (data) {
-                                if (data.state == "success") {
-                                    $('#Modal').modal('hide')
-                                } else {
-                                    $("#EnterpriseSubmit").removeAttr("disabled").text('提交');
-                                }
-                            }
-                        });
-                    });
-
-
-                })
-                $('#Modal').modal()
-            }
-        });
-        //关闭modal事件
-        $('#Modal').on('hidden.bs.modal', function () {
-            $(this).removeData("bs.modal");
-            $.reload();
-        });
-        //删除modal
-        $('#btn_remove').on('click', function () {
-            var table = $("#example").dataTable();
-            var nTrs = table.fnGetNodes();//fnGetNodes获取表格所有行，nTrs[i]表示第i行tr对象
-            for (var i = 0; i < nTrs.length; i++) {
-                if ($(nTrs[i]).hasClass('selected')) {
-                    var ID = $('#example').DataTable().row(i).data().ID;
-                }
-            }
-            if (ID == null) { alterOpen(true, "warning", "请选择要删除的内容!", 3000) }
-            else {
-                $('#Modal').on('show.bs.modal', function (event) {
-                    $('#form').load("EnterpriseForm?ID=" + ID);
-                    var modal = $(this)
-                    modal.find('.modal-title').text('您确定要删除该企业吗');
-                    //$("#enterprise-name").attr('disabled', "true");
-                    //$("#enterpriseSelect").attr('disabled', "true");
-                    $('#EnterpriseSubmit').on('click', function () {
-                        $("#EnterpriseSubmit").attr('disabled', "true").text('删除中...');
-                        var id = $.trim($("#ID").val());
-                        var param = { ID: $.trim(id) };
-                        if ($('[name=__RequestVerificationToken]').length > 0) {
-                            param["__RequestVerificationToken"] = $('[name=__RequestVerificationToken]').val();
-                        }
-                        $.ajax({
-                            url: "/AdminManage/Admin/EnterpriseDelete",
-                            async: false,
-                            data: param,
-                            method: "post",
-                            dataType: "json",
-                            success: function (data) {
-                                if (data.state == "success") {
-                                    $('#Modal').modal('hide')
-                                } else {
-                                    $("#EnterpriseSubmit").removeAttr("disabled").text('提交');
-                                }
-                            }
-                        });
-                    });
-                })
-                $('#Modal').modal()
-            }
-        });
-        //修改企业
-        $('#btn_department').on('click', function () {
-            var table = $("#example").dataTable();
-            var nTrs = table.fnGetNodes();//fnGetNodes获取表格所有行，nTrs[i]表示第i行tr对象
-            for (var i = 0; i < nTrs.length; i++) {
-                if ($(nTrs[i]).hasClass('selected')) {
-                    var ID = $('#example').DataTable().row(i).data().ID;
-                    var Name = $('#example').DataTable().row(i).data().EName;
-                }
-            }
-            if (ID == null) { alterOpen(true, "warning", "请选择要修改部门的企业!", 3000) }
-            else {
-                window.open(("/AdminManage/Department/Department?ID=" + ID + "&Name=" + Name))
-            }
-
-        });
         //提示alter
         function alterOpen(bool, type, text, time) {
             $.alterMsg({

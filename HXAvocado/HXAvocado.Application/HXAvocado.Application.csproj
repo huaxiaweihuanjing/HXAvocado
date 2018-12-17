@@ -49,12 +49,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="EnterpriseApp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HXAvocado.Data\HXAvocado.Data.csproj">
+      <Project>{a26c17be-2246-48dc-bfc2-b7ea3744b8d5}</Project>
+      <Name>HXAvocado.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HXAvocado.Entity\HXAvocado.Entity.csproj">
+      <Project>{af2f51d0-2957-4966-a86c-394253434ed8}</Project>
+      <Name>HXAvocado.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HXAvocado.ViewModel\HXAvocado.ViewModel.csproj">
+      <Project>{603a71a2-5848-4e70-9e29-e10419d7ce1a}</Project>
+      <Name>HXAvocado.ViewModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -2250,9 +2250,17 @@
     <Folder Include="WebRoot\Base\img\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\HXAvocado.Application\HXAvocado.Application.csproj">
+      <Project>{1b02bdf6-a132-4a6e-a38c-781f903f705e}</Project>
+      <Name>HXAvocado.Application</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HXAvocado.Code\HXAvocado.Code.csproj">
       <Project>{2d04fb7a-dca7-4dc6-ab81-79cbe494f80b}</Project>
       <Name>HXAvocado.Code</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HXAvocado.ViewModel\HXAvocado.ViewModel.csproj">
+      <Project>{603a71a2-5848-4e70-9e29-e10419d7ce1a}</Project>
+      <Name>HXAvocado.ViewModel</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

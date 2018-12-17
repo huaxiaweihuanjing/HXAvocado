@@ -1,17 +1,37 @@
 ﻿
 @{
-    Layout = null;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "首页";
 }
+<div id="myAlert" role="alert">
+    <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;" id="myAlert-font">
+        </font>
+    </font>
+</div>
+<h1 class="cover-heading">欢迎访问牛油果CRM管理系统</h1>
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <div> 
-    </div>
-</body>
-</html>
+
+
+@section scripts{
+    <script>
+        //提示alter
+        function alterOpen(bool, type, text, time) {
+            $.alterMsg({
+                bool: bool,
+                type: type,
+                text: text,
+            });
+            window.setTimeout(function () {
+                $.alterMsg({
+                    bool: false,
+                    type: '',
+                    text: '',
+                });
+            }, time);
+
+        }
+    </script>
+
+}

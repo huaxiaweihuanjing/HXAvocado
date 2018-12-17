@@ -6,10 +6,6 @@ namespace BoiledMeat.Web
 
     public abstract class ControllerBase : Controller
     {
-      
-        [HttpGet]
-
-
         protected virtual ActionResult Success(string message)
         {
 

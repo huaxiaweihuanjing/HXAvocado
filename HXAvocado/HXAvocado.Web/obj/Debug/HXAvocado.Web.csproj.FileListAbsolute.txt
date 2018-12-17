@@ -1,3 +1,4 @@
+C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\obj\Debug\HXAvocado.Web.csprojResolveAssemblyReference.cache
 C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\bin\HXAvocado.Web.dll.config
 C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\bin\HXAvocado.Web.dll
 C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\bin\HXAvocado.Web.pdb
@@ -52,6 +53,7 @@ C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\bin\roslyn\VBCSCompiler.exe
 C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\bin\roslyn\VBCSCompiler.exe.config
 C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\bin\EntityFramework.dll
 C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\bin\EntityFramework.SqlServer.dll
+C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\bin\HXAvocado.Code.dll
 C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\bin\Microsoft.Web.Infrastructure.dll
 C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\bin\System.Web.Helpers.dll
@@ -60,6 +62,8 @@ C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\bin\System.Web.Razor.dll
 C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\bin\System.Web.WebPages.Deployment.dll
 C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\bin\System.Web.WebPages.dll
 C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\bin\System.Web.WebPages.Razor.dll
+C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\bin\Newtonsoft.Json.dll
+C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\bin\HXAvocado.Code.pdb
 C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\bin\EntityFramework.xml
 C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\bin\EntityFramework.SqlServer.xml
 C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
@@ -69,6 +73,7 @@ C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\bin\System.Web.Razor.xml
 C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\bin\System.Web.WebPages.xml
 C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\bin\System.Web.WebPages.Deployment.xml
 C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\bin\System.Web.WebPages.Razor.xml
+C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\bin\Newtonsoft.Json.xml
 C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\bin\zh-Hans\EntityFramework.resources.dll
 C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\bin\zh-Hans\EntityFramework.SqlServer.resources.dll
 C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\bin\zh-Hans\System.Web.Helpers.resources.dll
@@ -79,8 +84,11 @@ C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\bin\zh-Hans\System.Web.WebPages.D
 C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
 C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\obj\Debug\HXAvocado.Web.dll
 C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\obj\Debug\HXAvocado.Web.pdb
-C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\obj\Debug\HXAvocado.Web.csprojResolveAssemblyReference.cache
-C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\bin\HXAvocado.Code.dll
-C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\bin\Newtonsoft.Json.dll
-C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\bin\HXAvocado.Code.pdb
-C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\bin\Newtonsoft.Json.xml
+C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\bin\HXAvocado.Application.dll
+C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\bin\HXAvocado.ViewModel.dll
+C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\bin\HXAvocado.Data.dll
+C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\bin\HXAvocado.Entity.dll
+C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\bin\HXAvocado.Application.pdb
+C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\bin\HXAvocado.ViewModel.pdb
+C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\bin\HXAvocado.Data.pdb
+C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Web\bin\HXAvocado.Entity.pdb

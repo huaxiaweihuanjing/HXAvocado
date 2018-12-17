@@ -1,7 +1,7 @@
 C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Code\bin\Debug\HXAvocado.Code.dll
 C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Code\bin\Debug\HXAvocado.Code.pdb
-C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Code\obj\Debug\HXAvocado.Code.dll
-C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Code\obj\Debug\HXAvocado.Code.pdb
 C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Code\bin\Debug\Newtonsoft.Json.dll
 C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Code\bin\Debug\Newtonsoft.Json.xml
 C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Code\obj\Debug\HXAvocado.Code.csprojResolveAssemblyReference.cache
+C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Code\obj\Debug\HXAvocado.Code.dll
+C:\MyProgram\HXAvocado\HXAvocado\HXAvocado.Code\obj\Debug\HXAvocado.Code.pdb
