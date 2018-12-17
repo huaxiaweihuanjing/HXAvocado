@@ -31,7 +31,7 @@ namespace HXAvocado.Web.Areas.SystemManage.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult EnterprisePost(EnterpriseViewModel enterpriseData)
         {
-            
+            app.EnterpriseEdit(enterpriseData);
             return Content(new AjaxResult { state = ResultType.success.ToString(), message = "保存成功" }.ToJson());
         }
     }

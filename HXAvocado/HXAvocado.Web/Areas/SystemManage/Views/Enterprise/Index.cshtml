@@ -66,9 +66,7 @@
 @section scripts{
     <script>
         //保存按钮ajax异步提交
-        $('#btn_save').on('click', function () {
-            $("#btn_save").attr('disabled', "true").text('保存中...');
-            $loading(true, "保存中...");
+        $('#btn_save').on('click', function () {        
             var ID = $.trim($("#ID").val());
             var Name = $.trim($("#Name").val());
             var ServicePhone = $.trim($("#ServicePhone").val());
@@ -77,6 +75,12 @@
             var DepositBank = $.trim($("#DepositBank").val());
             var BankAccount = $.trim($("#BankAccount").val());
             var Content = $.trim($("#Content").val());
+            //if (Name == "") {
+            //    alterOpen(true, "warning", "请输入企业名称", 2000);
+            //    return;
+            //}
+            $("#btn_save").attr('disabled', "true").text('保存中...');
+            $.loading(true, "保存中...");
             var param = {
                 ID: $.trim(ID), Name: $.trim(Name),
                 ServicePhone: $.trim(ServicePhone), ServiceEmail: $.trim(ServiceEmail),
@@ -93,7 +97,8 @@
                 method: "post",
                 dataType: "json",
             }).done(function (data) {
-                $loading(false);
+                $.loading(false);
+                $("#btn_save").removeAttr('disabled').text('保 存');
                 if (data.state == "success") {
                     alterOpen(true, "success", data.message, 2000)
                 }
@@ -101,7 +106,8 @@
                     alterOpen(true, "danger", data.message, 2000)
                 }
             }).fail(function (msg) {
-                $loading(false);
+                $("#btn_save").removeAttr('disabled').text('保 存');
+                $.loading(false);
                 alterOpen(true, "danger", "提交失败", 2000)
             });
         });

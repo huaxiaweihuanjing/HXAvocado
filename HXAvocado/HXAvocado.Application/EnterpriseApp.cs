@@ -90,6 +90,9 @@ namespace HXAvocado.Application
             else
             {
                 EnterpriseEntity enterpriseEntity = new EnterpriseEntity();
+                enterpriseEntity.ID = enterpriseData.ID;
+                db.EnterpriseEntitys.Attach(enterpriseEntity);
+                enterpriseEntity.Modify(enterpriseData.ID);              
                 enterpriseEntity.Name = enterpriseData.Name;
                 enterpriseEntity.Content = enterpriseData.Content;
                 enterpriseEntity.ServicePhone = enterpriseData.ServicePhone;
@@ -97,8 +100,6 @@ namespace HXAvocado.Application
                 enterpriseEntity.Address = enterpriseData.Address;
                 enterpriseEntity.DepositBank = enterpriseData.DepositBank;
                 enterpriseEntity.BankAccount = enterpriseData.BankAccount;
-                enterpriseEntity.Modify(enterpriseData.ID);
-                db.EnterpriseEntitys.Attach(enterpriseEntity);
                 db.SaveChanges();
             }
         }
