@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using HXAvocado.Data;
 using HXAvocado.ViewModel;
 using HXAvocado.Entity;
+using HXAvocado.Code;
 
 namespace HXAvocado.Application
 {
@@ -69,6 +70,37 @@ namespace HXAvocado.Application
             //    enterpriseData.BankAccount = ulits.First().BankAccount;
             //}
             //return enterpriseData;
+        }
+        public void EnterpriseEdit(EnterpriseViewModel enterpriseData)
+        {
+            if (Ext.IsEmpty(enterpriseData.ID))
+            {
+                EnterpriseEntity enterpriseEntity = new EnterpriseEntity();
+                enterpriseEntity.Name = enterpriseData.Name;
+                enterpriseEntity.Content = enterpriseData.Content;
+                enterpriseEntity.ServicePhone = enterpriseData.ServicePhone;
+                enterpriseEntity.ServiceEmail = enterpriseData.ServiceEmail;
+                enterpriseEntity.Address = enterpriseData.Address;
+                enterpriseEntity.DepositBank = enterpriseData.DepositBank;
+                enterpriseEntity.BankAccount = enterpriseData.BankAccount;
+                enterpriseEntity.Create();
+                db.EnterpriseEntitys.Add(enterpriseEntity);
+                db.SaveChanges();
+            }
+            else
+            {
+                EnterpriseEntity enterpriseEntity = new EnterpriseEntity();
+                enterpriseEntity.Name = enterpriseData.Name;
+                enterpriseEntity.Content = enterpriseData.Content;
+                enterpriseEntity.ServicePhone = enterpriseData.ServicePhone;
+                enterpriseEntity.ServiceEmail = enterpriseData.ServiceEmail;
+                enterpriseEntity.Address = enterpriseData.Address;
+                enterpriseEntity.DepositBank = enterpriseData.DepositBank;
+                enterpriseEntity.BankAccount = enterpriseData.BankAccount;
+                enterpriseEntity.Modify(enterpriseData.ID);
+                db.EnterpriseEntitys.Attach(enterpriseEntity);
+                db.SaveChanges();
+            }
         }
     }
 }

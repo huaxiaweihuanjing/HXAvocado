@@ -57,6 +57,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\HXAvocado.Code\HXAvocado.Code.csproj">
+      <Project>{2d04fb7a-dca7-4dc6-ab81-79cbe494f80b}</Project>
+      <Name>HXAvocado.Code</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HXAvocado.Data\HXAvocado.Data.csproj">
       <Project>{a26c17be-2246-48dc-bfc2-b7ea3744b8d5}</Project>
       <Name>HXAvocado.Data</Name>

@@ -65,29 +65,44 @@
 
 @section scripts{
     <script>
-        //
+        //保存按钮ajax异步提交
         $('#btn_save').on('click', function () {
             $("#btn_save").attr('disabled', "true").text('保存中...');
-            var id = $.trim($("#ID").val());
-            var name = $.trim($("#enterprise-name").val());
-            var marked = $('#enterpriseSelect').val();
-            var param = { ID: $.trim(id), Name: $.trim(name), Marked: marked };
+            $loading(true, "保存中...");
+            var ID = $.trim($("#ID").val());
+            var Name = $.trim($("#Name").val());
+            var ServicePhone = $.trim($("#ServicePhone").val());
+            var ServiceEmail = $.trim($("#ServiceEmail").val());
+            var Address = $.trim($("#Address").val());
+            var DepositBank = $.trim($("#DepositBank").val());
+            var BankAccount = $.trim($("#BankAccount").val());
+            var Content = $.trim($("#Content").val());
+            var param = {
+                ID: $.trim(ID), Name: $.trim(Name),
+                ServicePhone: $.trim(ServicePhone), ServiceEmail: $.trim(ServiceEmail),
+                Address: $.trim(Address), DepositBank: $.trim(DepositBank),
+                BankAccount: $.trim(BankAccount),Content: $.trim(Content)
+            };
             if ($('[name=__RequestVerificationToken]').length > 0) {
                 param["__RequestVerificationToken"] = $('[name=__RequestVerificationToken]').val();
             }
             $.ajax({
-                url: "/AdminManage/Admin/EnterpriseEdit",
+                url: "/SystemManage/Enterprise/EnterprisePost",
                 async: false,
                 data: param,
                 method: "post",
                 dataType: "json",
-                success: function (data) {
-                    if (data.state == "success") {
-                        $('#Modal').modal('hide')
-                    } else {
-                        $("#EnterpriseSubmit").removeAttr("disabled").text('提交');
-                    }
+            }).done(function (data) {
+                $loading(false);
+                if (data.state == "success") {
+                    alterOpen(true, "success", data.message, 2000)
                 }
+                else {
+                    alterOpen(true, "danger", data.message, 2000)
+                }
+            }).fail(function (msg) {
+                $loading(false);
+                alterOpen(true, "danger", "提交失败", 2000)
             });
         });
 
